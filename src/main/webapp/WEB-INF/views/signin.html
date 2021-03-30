@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="${pageTitle}">&nbsp;</title>
+	<th:block th:include="/fragments/static-resource.html :: static-resource">&nbsp;</th:block>
+	<style>
+	html,
+	body {
+	  height: 100%;
+	}
+	
+	.form-signin {
+	  width: 100%;
+	  max-width: 330px;
+	  padding: 15px;
+	  margin: auto;
+	}
+	
+	.form-signin .form-floating:focus-within {
+	  z-index: 2;
+	}
+	
+	.form-signin input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-right-radius: 0;
+	  border-bottom-left-radius: 0;
+	}
+	
+	.form-signin input[type="password"] {
+	  margin-bottom: 10px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+	</style>
+</head>
+<body class="text-center">
+	<div th:replace="/fragments/header.html :: header">&nbsp;</div>
+	
+	<main class="form-signin">
+		<div class="container">
+			<form method="post" th:action="@{/authenticate}">
+				<h1 class="h3 mb-3 fw-normal">Silahkan Login!</h1>
+				
+				<div class="form-floating">
+					<input type="text" class="form-control" id="floatingUsername" name="username" placeholder="username">
+					<label for="floatingUsername">Nama Pengguna</label>
+				</div>
+				
+				<div class="form-floating">
+					<input type="password" class="form-control" id="floatingPassword" name="password" placeholder="password">
+					<label for="floatingPassword">Kata Sandi</label>
+				</div>
+				
+				<button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+			</form>
+		</div>
+	</main>
+	
+</body>
+</html>

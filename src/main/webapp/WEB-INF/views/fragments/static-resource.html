@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="static-resource">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="UTF-8"/>
+	<!-- Bootstrap CSS Only -->
+	<link rel="stylesheet" media="screen" th:href="@{/resources/vendor/bootstrap/css/bootstrap.min.css}" />
+	<!-- Main CSS -->
+	<link rel="stylesheet" media="screen" th:href="@{/resources/core.css}" />
+	<!-- Bootstrap JavaScript Bundle with Popper -->
+	<script th:src="@{/resources/vendor/jquery/jquery-3.6.0.min.js}"></script>
+	<!-- Bootstrap JavaScript Bundle with Popper -->
+	<script th:src="@{/resources/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</th:block>
+</html>
